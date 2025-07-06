@@ -1,23 +1,54 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import Host from '../Contact/Host.tsx';
-import RoundButton from '@/components/RoundButton.tsx';
-import { Caption, Paragraph } from '@/components/Text.tsx';
+import Host from '../Contact/Host';
+import RoundButton from '@/components/RoundButton';
+import { Caption, Paragraph } from '@/components/Text';
 
 const Invitation = () => {
   const { greeting } = data;
+
+  const handleICSDownload = () => {
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'BEGIN:VEVENT',
+      'DTSTART:20250906T020000Z',
+      'DTEND:20250906T030000Z',
+      'SUMMARY:하영 제세 결혼식',
+      'DESCRIPTION:저희 결혼식에 초대합니다!',
+      'LOCATION:보테가마지오',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\\r\\n');
+
+    const blob = new Blob([icsContent], { type: 'text/calendar' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'wedding-invitation.ics';
+    a.click();
+
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <InvitationWrapper>
       <Paragraph>{greeting.message}</Paragraph>
       <Host />
       <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
-      {/* TODO: 구글캘린더 추가하기 기능을 넣는다면 링크 수정 */}
-      <RoundButton
-        target="_blank"
-        href=""
-        rel="noreferrer">
-        구글 캘린더 추가하기
-      </RoundButton>
+      <ButtonRow>
+        <RoundButton
+          target="_blank"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오"
+          rel="noreferrer"
+        >
+          구글 일정 등록하기
+        </RoundButton>
+        <RoundButton onClick={handleICSDownload}>
+          애플 일정 등록하기
+        </RoundButton>
+      </ButtonRow>
     </InvitationWrapper>
   );
 };
@@ -29,4 +60,10 @@ const InvitationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+`;
+
+const ButtonRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 `;

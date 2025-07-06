@@ -22,9 +22,16 @@ const NaverMap = ({ lat, lon }: NaverMapProps) => {
       // @ts-ignore
       if (window.naver && mapRef.current) {
         // @ts-ignore
-        new window.naver.maps.Map(mapRef.current, {
+        const map = new window.naver.maps.Map(mapRef.current, {
           center: new window.naver.maps.LatLng(lat, lon),
           zoom: 17,
+        });
+
+        // 마커(핀) 추가
+        // @ts-ignore
+        new window.naver.maps.Marker({
+          position: new window.naver.maps.LatLng(lat, lon),
+          map: map,
         });
       }
     };

@@ -91,17 +91,17 @@
     "address2": "서울 성동구 서울숲2길 32-14 갤러리아 포레 G층(B2) \n02-3409-0123",
     "naverMap": "https://naver.me/GOPeWA1M", 
     "kakaoMap": "https://kko.kakao.com/sQ4Rf8Ks4B",
-    "lat": 37.545556,
-    "lon": 127.045833
+    "lat": 37.5456773286722,
+    "lon": 127.042914714267
   },
   "locationInfo": [
     {
       "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 분당선 서울숲역 5번 출구 (도보 2분)\n\uD83D\uDC49\uD83C\uDFFB 2호선 뚝섬역 8번 출구 (도보 8분)"
+      "desc": "- 분당선 서울숲역 5번 출구 (도보 5분)\n- 2호선 뚝섬역 8번 출구 (도보 10분)"
     },
     {
       "title": "\uD83D\uDCCD 주차안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 B3-B7층 2시간 무료주차\n(안내데스크에서 주차 등록)"
+      "desc": "- 건물 내 B3-B7층 2시간 무료주차\n- (안내데스크에서 주차 등록)"
     }
   ],
   "emojis": [
