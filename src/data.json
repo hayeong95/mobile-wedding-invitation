@@ -1,45 +1,45 @@
 {
   "greeting": {
-    "title": "장세모 \uD83D\uDC8D 황네모\n결혼합니다!",
-    "message": "저희 결혼합니다.\n\n서로에게 알맞은 온도로 따뜻하던 우리.\n부부로서 첫걸음을 내딛는 그 설렘의 순간에\n소중한 분들을 초대합니다.",
+    "title": "안제세 \uD83D\uDC8D 전하영\n결혼합니다!",
+    "message": "선선한 가을바람이 불어오는 날\n저희 두 사람 하나된 발걸음을 내딛으려합니다\n가까이서 저희들의 출발을 지켜봐주시면\n더 없는 기쁨으로 간직하겠습니다",
     "host": {
       "groom": {
-        "name": "세모",
+        "name": "제세",
         "relation": "아들",
         "parents": [
           {
             "relation": "아버지",
-            "name": "장아빠"
+            "name": "한상혁"
           },
           {
             "relation": "어머니",
-            "name": "이엄마"
+            "name": "신주현"
           }
         ]
       },
       "bride": {
-        "name": "네모",
+        "name": "전하영",
         "relation": "딸",
         "parents": [
           {
             "relation": "아버지",
-            "name": "황아빠"
+            "name": "전상헌"
           },
           {
             "relation": "어머니",
-            "name": "이엄마"
+            "name": "박서영"
           }
         ]
       }
     },
-    "eventDetail": "2024년 2월 17일 (토) 14:00\n아펠가모 공덕 라로브홀"
+    "eventDetail": "2025년 9월 6일 (토) 11:00\n보테가마지오"
   },
   "hostInfo": [
     {
       "host": "신랑측",
       "accountInfo": [
         {
-          "name": "장세모",
+          "name": "안제세",
           "relation": "신랑",
           "bank": "카카오뱅크",
           "account": "1234-56-789012",
@@ -47,13 +47,13 @@
           "tossAccount": ""
         },
         {
-          "name": "장아빠",
+          "name": "한상혁",
           "relation": "아버지",
           "bank": "농협",
           "account": "123-45-678901"
         },
         {
-          "name": "이엄마",
+          "name": "신주현",
           "relation": "어머니",
           "bank": "농협",
           "account": "123-45-678901"
@@ -64,7 +64,7 @@
       "host": "신부측",
       "accountInfo": [
         {
-          "name": "황네모",
+          "name": "전하영",
           "relation": "신부",
           "bank": "토스뱅크",
           "account": "1234-5678-9012",
@@ -72,13 +72,13 @@
           "tossAccount": ""
         },
         {
-          "name": "황아빠",
+          "name": "전상헌",
           "relation": "아버지",
           "bank": "농협",
           "account": "123-45-678901"
         },
         {
-          "name": "이엄마",
+          "name": "박서영",
           "relation": "어머니",
           "bank": "농협",
           "account": "123-45-678901"
@@ -87,25 +87,24 @@
     }
   ],
   "mapInfo": {
-    "address1": "아펠가모 공덕 라로브홀",
-    "address2": "서울 마포구 마포대로 92\n효성해링턴스퀘어 B동 7층\n02-2197-0230",
-    "naverMap": "https://map.naver.com/p/directions/-/14132311.1099497,4514956.9078363,%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EA%B3%B5%EB%8D%95,1929913788,PLACE_POI/-/transit?c=15.00,0,0,0,dh",
-    "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,489503,1123003&rt1=&rt2=%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EA%B3%B5%EB%8D%95%EC%A0%90&rtIds=,630786038",
-    "lat": 37.54222,
-    "lon": 126.952708
+    "address1": "보테가마지오",
+    "address2": "서울 성동구 서울숲2길 32-14 갤러리아 포레 G층(B2) \n02-3409-0123",
+    "naverMap": "https://naver.me/GOPeWA1M", 
+    "kakaoMap": "https://kko.kakao.com/sQ4Rf8Ks4B",
+    "lat": 37.545556,
+    "lon": 127.045833
   },
   "locationInfo": [
     {
       "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 5·6호선 공덕역 7번 출구 (도보 2분)\n\uD83D\uDC49\uD83C\uDFFB 경의·중앙선, 공항철도 공덕역 10번 출구 (도보 30초)"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 분당선 서울숲역 5번 출구 (도보 2분)\n\uD83D\uDC49\uD83C\uDFFB 2호선 뚝섬역 8번 출구 (도보 8분)"
     },
     {
       "title": "\uD83D\uDCCD 주차안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 3-5층 2시간 무료주차\n(안내데스크에서 주차권 수령)"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 B3-B7층 2시간 무료주차\n(안내데스크에서 주차 등록)"
     }
   ],
   "emojis": [
-    "❤️",
     "💛",
     "💌",
     "🥹",
@@ -115,10 +114,6 @@
     "🤍",
     "✨",
     "💍",
-    "💒",
-    "💕",
-    "😍",
-    "🔔",
-    "💘"
+    "🔔"
   ]
 }

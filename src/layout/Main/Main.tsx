@@ -23,14 +23,15 @@ const MainImg = styled.img`
 `;
 
 const MainTitle = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
+  font-family: LeeSeoyun, serif;
   font-size: 2rem;
-  color: #2F2120;
+  color:rgb(40, 18, 17);
   line-height: 120%;
   white-space: pre-line;
 `;
 
 const SubTitle = styled.p`
+  font-family: LeeSeoyun, serif;
   font-size: 1.1rem;
   color: #2F2120;
   line-height: 140%;
