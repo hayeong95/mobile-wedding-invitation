@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/GalleryWrap-CalNikYR.js","assets/GalleryWrap-cPPnkASS.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/GalleryWrap-xGkmvyks.js","assets/GalleryWrap-cPPnkASS.css"])))=>i.map(i=>d[i]);
 function fy(i,t){for(var r=0;r<t.length;r++){const o=t[r];if(typeof o!="string"&&!Array.isArray(o)){for(const l in o)if(l!=="default"&&!(l in i)){const u=Object.getOwnPropertyDescriptor(o,l);u&&Object.defineProperty(i,l,u.get?u:{enumerable:!0,get:()=>o[l]})}}}return Object.freeze(Object.defineProperty(i,Symbol.toStringTag,{value:"Module"}))}(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const l of document.querySelectorAll('link[rel="modulepreload"]'))o(l);new MutationObserver(l=>{for(const u of l)if(u.type==="childList")for(const d of u.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&o(d)}).observe(document,{childList:!0,subtree:!0});function r(l){const u={};return l.integrity&&(u.integrity=l.integrity),l.referrerPolicy&&(u.referrerPolicy=l.referrerPolicy),l.crossOrigin==="use-credentials"?u.credentials="include":l.crossOrigin==="anonymous"?u.credentials="omit":u.credentials="same-origin",u}function o(l){if(l.ep)return;l.ep=!0;const u=r(l);fetch(l.href,u)}})();function pc(i){return i&&i.__esModule&&Object.prototype.hasOwnProperty.call(i,"default")?i.default:i}var Cu={exports:{}},Qi={},Eu={exports:{}},fe={};/**
  * @license React
  * react.production.min.js
@@ -122,15 +122,15 @@ Error generating stack: `+f.message+`
   display: flex;
   width: 100%;
   gap: 2px;
-`,Cp=re.button`
+`,Cp=re.a`
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
   margin: 5px 0;
-  padding: 0 0.8em;
-  width: inherit;
+  padding: 0.7em 1.5em;
+  width: 100%;
   font-size: 0.7rem;
   cursor: pointer;
   gap: 2px;
@@ -139,7 +139,7 @@ Error generating stack: `+f.message+`
   outline: none;
   box-shadow: none;
   background: white;
-`.withComponent("a"),j0=re.img`
+`,j0=re.img`
   width: 50px;
 `,B0=re.img`
   width: 70px;
@@ -1935,7 +1935,7 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const t of t
   display: flex;
   flex-direction: row;
   gap: 12px;
-`,Hk=()=>we($k,{children:[V(Cm,{target:"_blank",href:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오",rel:"noreferrer",children:"구글 일정 등록하기"}),V(Cm,{href:"https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics",target:"_blank",rel:"noreferrer",children:"애플 일정 등록하기"})]}),Vk=()=>{const{locationInfo:i}=En;return V(qk,{children:i?.map(t=>{const{title:r,desc:o}=t;return we(Gk,{children:[V(Hm,{children:r}),V(wc,{children:o})]},r)})})},qk=re.div`
+`,Hk=()=>we($k,{children:[V(Cm,{target:"_blank",href:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오",rel:"noreferrer",children:"구글 일정 등록"}),V(Cm,{href:"https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics",target:"_blank",rel:"noreferrer",children:"애플 일정 등록"})]}),Vk=()=>{const{locationInfo:i}=En;return V(qk,{children:i?.map(t=>{const{title:r,desc:o}=t;return we(Gk,{children:[V(Hm,{children:r}),V(wc,{children:o})]},r)})})},qk=re.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2012,4 +2012,4 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const t of t
   border-radius: 6px;
   color: ${({isToday:i})=>i?"#e88ca6":"#222"};
   opacity: ${({children:i})=>i===""?0:1};
-`,_I=me.lazy(()=>h0(()=>import("./GalleryWrap-CalNikYR.js"),__vite__mapDeps([0,1])));function yI(){const[i,t]=me.useState(!1),r=me.useRef(null);me.useEffect(()=>(window.addEventListener("scroll",o),()=>{window.removeEventListener("scroll",o)}),[]);const o=()=>{if(r.current){const{offsetTop:l}=r.current;window.scrollY>=l?t(!0):t(!1)}};return we(K0,{children:[V(cr,{children:V(nI,{})}),we(cr,{children:[V(Zi,{children:"모시는 글"}),V(Bk,{})]}),we(cr,{children:[V(fI,{}),V(Hk,{})]}),we(cr,{ref:r,children:[V(Zi,{children:"Gallery"}),V(me.Suspense,{fallback:V("div",{children:"갤러리 불러오는 중..."}),children:V(_I,{})})]}),we(cr,{children:[V(Zi,{children:"마음 전하실 곳"}),V(G0,{})]}),we(cr,{children:[V(Zi,{children:"오시는 길"}),V(Jk,{})]}),we(cr,{children:[V(Zi,{children:"신랑 신부에게"}),V(Ok,{})]}),V(Ik,{isVisible:i})]})}c0.createRoot(document.getElementById("root")).render(V(yI,{}));export{km as R,me as a,we as b,pc as g,tI as i,V as j,l0 as r,re as s};
+`,_I=me.lazy(()=>h0(()=>import("./GalleryWrap-xGkmvyks.js"),__vite__mapDeps([0,1])));function yI(){const[i,t]=me.useState(!1),r=me.useRef(null);me.useEffect(()=>(window.addEventListener("scroll",o),()=>{window.removeEventListener("scroll",o)}),[]);const o=()=>{if(r.current){const{offsetTop:l}=r.current;window.scrollY>=l?t(!0):t(!1)}};return we(K0,{children:[V(cr,{children:V(nI,{})}),we(cr,{children:[V(Zi,{children:"모시는 글"}),V(Bk,{})]}),we(cr,{children:[V(fI,{}),V(Hk,{})]}),we(cr,{ref:r,children:[V(Zi,{children:"Gallery"}),V(me.Suspense,{fallback:V("div",{children:"갤러리 불러오는 중..."}),children:V(_I,{})})]}),we(cr,{children:[V(Zi,{children:"마음 전하실 곳"}),V(G0,{})]}),we(cr,{children:[V(Zi,{children:"오시는 길"}),V(Jk,{})]}),we(cr,{children:[V(Zi,{children:"신랑 신부에게"}),V(Ok,{})]}),V(Ik,{isVisible:i})]})}c0.createRoot(document.getElementById("root")).render(V(yI,{}));export{km as R,me as a,we as b,pc as g,tI as i,V as j,l0 as r,re as s};
