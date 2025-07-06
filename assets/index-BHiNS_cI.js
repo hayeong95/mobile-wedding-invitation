@@ -1816,7 +1816,7 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const e of t
   color: #44484d;
   text-decoration: none;
   background-color: #e6ece1;
-`.withComponent("a"),XT=()=>{const{greeting:r}=In;return we(JT,{children:[W(L0,{children:r.message}),W(ZT,{}),W(cc,{textAlign:"center",children:r.eventDetail}),we(ex,{children:[W(vm,{target:"_blank",href:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오",rel:"noreferrer",children:"구글 일정 등록하기"}),W(vm,{href:"/mobile-wedding-invitation/wedding-invitation.ics",target:"_blank",rel:"noreferrer",children:"애플 일정 등록하기"})]})]})},JT=ee.div`
+`.withComponent("a"),XT=()=>{const{greeting:r}=In;return we(JT,{children:[W(L0,{children:r.message}),W(ZT,{}),W(cc,{textAlign:"center",children:r.eventDetail}),we(ex,{children:[W(vm,{target:"_blank",href:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오",rel:"noreferrer",children:"구글 일정 등록하기"}),W(vm,{href:"https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics",target:"_blank",rel:"noreferrer",children:"애플 일정 등록하기"})]})]})},JT=ee.div`
   display: flex;
   flex-direction: column;
   align-items: center;
