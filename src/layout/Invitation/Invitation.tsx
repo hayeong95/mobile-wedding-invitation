@@ -67,14 +67,14 @@ export const ScheduleButtons = () => (
       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오"
       rel="noreferrer"
     >
-      구글 일정 등록하기
+      구글 일정 등록
     </RoundButton>
     <RoundButton
       href="https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics"
       target="_blank"
       rel="noreferrer"
     >
-      애플 일정 등록하기
+      애플 일정 등록
     </RoundButton>
   </ButtonRow>
 );

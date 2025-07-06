@@ -110,15 +110,15 @@ const AccountLinks = styled.div`
   gap: 2px;
 `;
 
-const AccountButton = styled.button`
+const AccountButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
   margin: 5px 0;
-  padding: 0 0.8em;
-  width: inherit;
+  padding: 0.7em 1.5em;
+  width: 100%;
   font-size: 0.7rem;
   cursor: pointer;
   gap: 2px;
@@ -127,7 +127,7 @@ const AccountButton = styled.button`
   outline: none;
   box-shadow: none;
   background: white;
-`.withComponent('a');
+`;
 
 const KakaopayImg = styled.img`
   width: 50px;
