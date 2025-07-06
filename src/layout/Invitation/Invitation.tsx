@@ -7,30 +7,30 @@ import { Caption, Paragraph } from '@/components/Text';
 const Invitation = () => {
   const { greeting } = data;
 
-  const handleICSDownload = () => {
-    const icsContent = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'BEGIN:VEVENT',
-      'DTSTART:20250906T020000Z',
-      'DTEND:20250906T030000Z',
-      'SUMMARY:하영 제세 결혼식',
-      'DESCRIPTION:저희 결혼식에 초대합니다!',
-      'LOCATION:보테가마지오',
-      'END:VEVENT',
-      'END:VCALENDAR'
-    ].join('\\r\\n');
+  // const handleICSDownload = () => {
+  //   const icsContent = [
+  //     'BEGIN:VCALENDAR',
+  //     'VERSION:2.0',
+  //     'BEGIN:VEVENT',
+  //     'DTSTART:20250906T020000Z',
+  //     'DTEND:20250906T030000Z',
+  //     'SUMMARY:하영 제세 결혼식',
+  //     'DESCRIPTION:저희 결혼식에 초대합니다!',
+  //     'LOCATION:보테가마지오',
+  //     'END:VEVENT',
+  //     'END:VCALENDAR'
+  //   ].join('\\r\\n');
 
-    const blob = new Blob([icsContent], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
+  //   const blob = new Blob([icsContent], { type: 'text/calendar' });
+  //   const url = URL.createObjectURL(blob);
 
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'wedding-invitation.ics';
-    a.click();
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = 'wedding-invitation.ics';
+  //   a.click();
 
-    URL.revokeObjectURL(url);
-  };
+  //   URL.revokeObjectURL(url);
+  // };
 
   return (
     <InvitationWrapper>
@@ -45,7 +45,11 @@ const Invitation = () => {
         >
           구글 일정 등록하기
         </RoundButton>
-        <RoundButton onClick={handleICSDownload}>
+        <RoundButton
+          href="/wedding-invitation.ics"
+          target="_blank"
+          rel="noreferrer"
+        >
           애플 일정 등록하기
         </RoundButton>
       </ButtonRow>
