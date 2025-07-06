@@ -1,15 +1,19 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, Suspense, lazy } from 'react';
 // import { NavermapsProvider } from 'react-naver-maps';
 import { Heading1 } from '@/components/Text';
 import Wrapper from '@/components/Wrapper';
 import Account from '@/layout/Account/Account';
 import Container from '@/layout/Container';
 import FloatingBar from '@/layout/FloatingBar/FloatingBar';
-import GalleryWrap from '@/layout/Gallery/GalleryWrap';
+// import GalleryWrap from '@/layout/Gallery/GalleryWrap';
 import Guestbook from '@/layout/Guestbook/Guestbook';
 import Invitation from '@/layout/Invitation/Invitation';
 import Location from '@/layout/Location/Location';
 import Main from '@/layout/Main/Main';
+import Calendar from '@/components/Calendar';
+import { ScheduleButtons } from '@/layout/Invitation/Invitation';
+
+const GalleryWrap = lazy(() => import('@/layout/Gallery/GalleryWrap'));
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,9 +49,15 @@ function App() {
         <Heading1>모시는 글</Heading1>
         <Invitation />
       </Wrapper>
+      <Wrapper>
+        <Calendar />
+        <ScheduleButtons />
+      </Wrapper>
       <Wrapper ref={galleryRef}>
         <Heading1>Gallery</Heading1>
-        <GalleryWrap />
+        <Suspense fallback={<div>갤러리 불러오는 중...</div>}>
+          <GalleryWrap />
+        </Suspense>
       </Wrapper>
       <Wrapper>
         <Heading1>마음 전하실 곳</Heading1>

@@ -34,7 +34,7 @@ export default Account;
 
 const HostInfoWrapper = styled.div`
   display: flex;
-  width: 90%;
+  width: 70%;
   flex-direction: column;
   padding: 20px;
 `;

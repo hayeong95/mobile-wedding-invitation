@@ -48,6 +48,9 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
   cursor: pointer;
   & > p {
     color: #44484d;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.1rem;
   }
   & > span {
     display: flex;
