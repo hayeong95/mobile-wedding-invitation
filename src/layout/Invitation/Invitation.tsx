@@ -46,7 +46,7 @@ const Invitation = () => {
           구글 일정 등록하기
         </RoundButton>
         <RoundButton
-          href="/mobile-wedding-invitation/wedding-invitation.ics"
+          href="https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics"
           target="_blank"
           rel="noreferrer"
         >
