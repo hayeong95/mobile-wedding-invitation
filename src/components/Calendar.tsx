@@ -25,10 +25,12 @@ const getCalendarDataset = (date: Dayjs): DayjsMonth => {
 };
 
 const Calendar: React.FC = () => {
-  const today = dayjs().month(8);
-  const month = today.month() + 1;
-  const year = today.year();
-  const weeks = getCalendarDataset(today);
+  // Always show September 2025 and highlight the 6th
+  const eventDate = dayjs('2025-09-06');
+  const calendarMonth = eventDate.startOf('month');
+  const month = calendarMonth.month() + 1;
+  const year = calendarMonth.year();
+  const weeks = getCalendarDataset(calendarMonth);
 
   return (
     <CalendarWrapper>
@@ -38,7 +40,7 @@ const Calendar: React.FC = () => {
           <WeekDay key={d}>{d}</WeekDay>
         ))}
         {weeks.flat().map((date, i) => (
-          <DateCell key={i} isToday={date === String(today.date())}>
+          <DateCell key={i} isToday={date === '6'}>
             {date}
           </DateCell>
         ))}

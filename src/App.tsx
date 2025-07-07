@@ -12,8 +12,22 @@ import Location from '@/layout/Location/Location';
 import Main from '@/layout/Main/Main';
 import Calendar from '@/components/Calendar';
 import { ScheduleButtons } from '@/layout/Invitation/Invitation';
+import styled from '@emotion/styled';
 
 const GalleryWrap = lazy(() => import('@/layout/Gallery/GalleryWrap'));
+
+const Attribution = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #bbb;
+  margin: 24px 0 12px 0;
+  a {
+    color: #bbb;
+    text-decoration: none;
+    pointer-events: auto;
+  }
+`;
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,40 +54,45 @@ function App() {
   };
 
   return (
-   // <NavermapsProvider ncpClientId={ncpClientId}>
-    <Container>
-      <Wrapper>
-        <Main />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>모시는 글</Heading1>
-        <Invitation />
-      </Wrapper>
-      <Wrapper>
-        <Calendar />
-        <ScheduleButtons />
-      </Wrapper>
-      <Wrapper ref={galleryRef}>
-        <Heading1>Gallery</Heading1>
-        <Suspense fallback={<div>갤러리 불러오는 중...</div>}>
-          <GalleryWrap />
-        </Suspense>
-      </Wrapper>
-      <Wrapper>
-        <Heading1>마음 전하실 곳</Heading1>
-        <Account />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>오시는 길</Heading1>
-        <Location />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>신랑 신부에게</Heading1>
-        <Guestbook />
-      </Wrapper>
-      <FloatingBar isVisible={isVisible} />
-    </Container>
-   // </NavermapsProvider>
+    <>
+      <Container>
+        <Wrapper>
+          <Main />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>모시는 글</Heading1>
+          <Invitation />
+        </Wrapper>
+        <Wrapper>
+          <Calendar />
+          <ScheduleButtons />
+        </Wrapper>
+        <Wrapper ref={galleryRef}>
+          <Heading1>Gallery</Heading1>
+          <Suspense fallback={<div>갤러리 불러오는 중...</div>}>
+            <GalleryWrap />
+          </Suspense>
+        </Wrapper>
+        <Wrapper>
+          <Heading1>마음 전하실 곳</Heading1>
+          <Account />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>오시는 길</Heading1>
+          <Location />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>신랑 신부에게</Heading1>
+          <Guestbook />
+        </Wrapper>
+        <FloatingBar isVisible={isVisible} />
+      </Container>
+      <Attribution>
+        <a href="https://www.flaticon.com/free-icons/leaves" title="leaves icons" target="_blank" rel="noopener noreferrer">
+          Leaves icons created by amoghdesign - Flaticon
+        </a>
+      </Attribution>
+    </>
   );
 }
 

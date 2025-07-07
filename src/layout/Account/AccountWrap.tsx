@@ -35,6 +35,11 @@ const AccountWrap = ({
       <Info>
         <Relation>{relation}</Relation>
         <Name>{name}</Name>
+        {kakaopayAccount && (
+          <KakaoInlineButton href={kakaopayAccount} target="_blank" rel="noreferrer">
+            <KakaopayImg src={kakaopay} alt="kakaopay" />
+          </KakaoInlineButton>
+        )}
       </Info>
       <Details>
         <AccountInfo>
@@ -45,11 +50,6 @@ const AccountWrap = ({
         </CopyButton>
       </Details>
       <AccountLinks>
-        {kakaopayAccount && (
-          <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
-            <KakaopayImg src={kakaopay} alt="kakaopay" />
-          </AccountButton>
-        )}
         {tossAccount && (
           <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
             <TossImg src={toss} alt="toss" />
@@ -130,11 +130,21 @@ const AccountButton = styled.a`
 `;
 
 const KakaopayImg = styled.img`
-  width: 50px;
+  width: 44px;
 `;
 
-const TossImg = styled.img`
-  width: 70px;
+const TossImg = styled.img`  width: 70px;
+`;
+
+const KakaoInlineButton = styled.a`
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+  border: none;
+  border-radius: 5px;
+  padding: 0.2em 0.5em;
+  background: white;
+  height: 32px;
 `;
 
 export default AccountWrap;

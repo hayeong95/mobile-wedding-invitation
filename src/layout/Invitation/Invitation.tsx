@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import data from 'data.json';
 import Host from '../Contact/Host';
 import RoundButton from '@/components/RoundButton';
-import { Caption, Paragraph } from '@/components/Text';
+import { Paragraph } from '@/components/Text';
+import flowerImg from '@/assets/images/nature.png';
 
 const Invitation = () => {
   const { greeting } = data;
@@ -34,9 +35,14 @@ const Invitation = () => {
 
   return (
     <InvitationWrapper>
-      <Paragraph>{greeting.message}</Paragraph>
+      <Paragraph >{greeting.message}</Paragraph>
+      <img
+        src={flowerImg}
+        alt="flower"
+        style={{ width: 24, height: 24, verticalAlign: 'middle', marginRight: 6 }}
+      />
       <Host />
-      <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
+      <Paragraph style={{ textAlign: 'center' }}>{greeting.eventDetail}</Paragraph>
     </InvitationWrapper>
   );
 };

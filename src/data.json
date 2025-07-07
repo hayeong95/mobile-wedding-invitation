@@ -18,7 +18,7 @@
         ]
       },
       "bride": {
-        "name": "전하영",
+        "name": "하영",
         "relation": "딸",
         "parents": [
           {
@@ -32,7 +32,7 @@
         ]
       }
     },
-    "eventDetail": "2025년 9월 6일 (토) 11:00\n보테가마지오"
+    "eventDetail": "2025년 9월 6일 (토) 11:00\n서울숲 보테가마지오"
   },
   "hostInfo": [
     {
@@ -41,22 +41,22 @@
         {
           "name": "안제세",
           "relation": "신랑",
-          "bank": "카카오뱅크",
-          "account": "1234-56-789012",
+          "bank": "국민은행",
+          "account": "423702-01-403089",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
           "name": "한상혁",
           "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "하나은행",
+          "account": "346-890621-40707"
         },
         {
           "name": "신주현",
           "relation": "어머니",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "신한은행",
+          "account": "110-033-461060"
         }
       ]
     },
@@ -66,22 +66,22 @@
         {
           "name": "전하영",
           "relation": "신부",
-          "bank": "토스뱅크",
-          "account": "1234-5678-9012",
-          "kakaopayAccount": "",
+          "bank": "우리은행",
+          "account": "1002-791-950322",
+          "kakaopayAccount": "https://link.kakaopay.com/__/qItqrv_",
           "tossAccount": ""
         },
         {
           "name": "전상헌",
           "relation": "아버지",
           "bank": "농협",
-          "account": "123-45-678901"
+          "account": "815143-52-349782"
         },
         {
           "name": "박서영",
           "relation": "어머니",
           "bank": "농협",
-          "account": "123-45-678901"
+          "account": "35614-38-283483"
         }
       ]
     }
