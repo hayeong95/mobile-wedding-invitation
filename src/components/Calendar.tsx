@@ -61,15 +61,17 @@ export default Calendar;
 
 const CalendarWrapper = styled.div`
   background: url(${calendarBg}) center/cover no-repeat;
+  aspect-ratio: 4/5;
+  min-width: 350px;
   max-width: 800px;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 1;
   padding: 0;
-  min-height: 600px;
 
   /* 배경 전체 오버레이 */
   &::before {
@@ -107,14 +109,16 @@ const CalendarContent = styled.div`
   background: rgba(255,255,255,0.7);
   border-radius: 16px;
   padding: 30px 10px;
-  width: 40%;
+  width: 60%;         // 또는 80%, 90% 등
+  max-width: 500px;   // 필요시 최대폭 제한
+  min-width: 220px;   // 필요시 최소폭 제한
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 2;
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
 `;
 
 // For the ScheduleButtons area (in Invitation/Invitation.tsx), wrap with a fully opaque background

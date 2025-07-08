@@ -78,12 +78,12 @@ const CustomNavButton = styled.button`
   position: absolute;
   top: 50%;
   z-index: 10;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0);
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 1.5rem;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
   color: #e88ca6;
   transform: translateY(-50%);
   cursor: pointer;
@@ -93,6 +93,6 @@ const CustomNavButton = styled.button`
   align-items: center;
   justify-content: center;
   &:hover {
-    background: #ffe4ef;
+    background: rgba(255,255,255,0);
   }
 `; 

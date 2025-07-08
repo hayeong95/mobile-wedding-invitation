@@ -1,1 +1,11 @@
- 
+.swiper-pagination-bullet {
+  background: #e88ca6 !important;
+  opacity: 0.3;
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 3px !important;
+}
+.swiper-pagination-bullet-active {
+  background: #e88ca6 !important;
+  opacity: 1;
+} 
