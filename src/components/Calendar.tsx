@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import dayjs, { Dayjs } from 'dayjs';
+import calendarBg from '@/assets/images/calendar-bg.jpg';
+import { ScheduleButtons } from '@/layout/Invitation/Invitation';
 
 const weekDays = ['일', '월', '화', '수', '목', '금', '토'];
 type DayjsWeek = [string, string, string, string, string, string, string];
@@ -34,17 +36,23 @@ const Calendar: React.FC = () => {
 
   return (
     <CalendarWrapper>
-      <CalendarHeader>{year}년 {month}월</CalendarHeader>
-      <CalendarGrid>
-        {weekDays.map((d) => (
-          <WeekDay key={d}>{d}</WeekDay>
-        ))}
-        {weeks.flat().map((date, i) => (
-          <DateCell key={i} isToday={date === '6'}>
-            {date}
-          </DateCell>
-        ))}
-      </CalendarGrid>
+      <CalendarContent>
+        <CalendarHeader>{year}년 {month}월</CalendarHeader>
+        <CalendarGrid>
+          {weekDays.map((d) => (
+            <WeekDay key={d}>{d}</WeekDay>
+          ))}
+          {weeks.flat().map((date, i) => (
+            <DateCell key={i} isToday={date === '6'}>
+              {date}
+            </DateCell>
+          ))}
+        </CalendarGrid>
+      </CalendarContent>
+      <ScheduleButtonsWrapper>
+        <ScheduleButtons background="rgba(255,255,255,0.15)" />
+      </ScheduleButtonsWrapper>
+      <BottomGradient />
     </CalendarWrapper>
   );
 };
@@ -52,16 +60,75 @@ const Calendar: React.FC = () => {
 export default Calendar;
 
 const CalendarWrapper = styled.div`
-  background: #fff;
-  /* border-radius: 12px; */
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.06); */
-  padding: 20px 10px;
-  margin: 24px 0;
-  max-width: 340px;
+  background: url(${calendarBg}) center/cover no-repeat;
+  max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  min-height: 600px;
+
+  /* 배경 전체 오버레이 */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* 위쪽 그라데이션 */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, #FFF9F4 0%, rgba(255,249,244,0) 100%);
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 0;
+  }
+`;
+
+const BottomGradient = styled.div`
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 60px;
+  background: linear-gradient(to top, #FFF9F4 0%, rgba(255,249,244,0) 100%);
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 0;
+`;
+const CalendarContent = styled.div`
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  padding: 30px 10px;
+  width: 40%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  margin-top: 150px;
+`;
+
+// For the ScheduleButtons area (in Invitation/Invitation.tsx), wrap with a fully opaque background
+// Example usage in the parent file:
+// <OpaqueButtonRow><ScheduleButtons /></OpaqueButtonRow>
+export const OpaqueButtonRow = styled.div`
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.0);
+  padding: 12px 0;
+  margin-top: -12px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 `;
 const CalendarHeader = styled.div`
   font-size: 1.4rem;
@@ -74,12 +141,12 @@ const CalendarGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 4px;
-  width: 100%;
+  width: 90%;
 `;
 const WeekDay = styled.div`
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-family: 'SUITE-Regular', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   color: #e88ca6;
   text-align: center;
   letter-spacing: 0.02em;
@@ -94,6 +161,14 @@ const DateCell = styled.div<{ isToday?: boolean }>`
   font-weight: 400;
   background: ${({ isToday }) => (isToday ? '#ffe4ef' : 'transparent')};
   border-radius: 6px;
-  color: ${({ isToday }) => (isToday ? '#e88ca6' : '#222')};
+  color: ${({ isToday }) => (isToday ? '#e88ca6' : '#343a40')};
   opacity: ${({ children }) => (children === '' ? 0 : 1)};
+`;
+
+const ScheduleButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 16px;
 `;

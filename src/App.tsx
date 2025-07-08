@@ -11,10 +11,9 @@ import Invitation from '@/layout/Invitation/Invitation';
 import Location from '@/layout/Location/Location';
 import Main from '@/layout/Main/Main';
 import Calendar from '@/components/Calendar';
-import { ScheduleButtons } from '@/layout/Invitation/Invitation';
 import styled from '@emotion/styled';
 
-const GalleryWrap = lazy(() => import('@/layout/Gallery/GalleryWrap'));
+const GallerySlideshow = lazy(() => import('./layout/Gallery/GallerySlideshow'));
 
 const Attribution = styled.div`
   width: 100%;
@@ -65,12 +64,11 @@ function App() {
         </Wrapper>
         <Wrapper>
           <Calendar />
-          <ScheduleButtons />
         </Wrapper>
         <Wrapper ref={galleryRef}>
           <Heading1>Gallery</Heading1>
           <Suspense fallback={<div>갤러리 불러오는 중...</div>}>
-            <GalleryWrap />
+            <GallerySlideshow />
           </Suspense>
         </Wrapper>
         <Wrapper>

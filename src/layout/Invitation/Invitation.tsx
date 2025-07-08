@@ -66,21 +66,39 @@ export const ButtonRow = styled.div`
   gap: 12px;
 `;
 
-export const ScheduleButtons = () => (
-  <ButtonRow>
-    <RoundButton
-      target="_blank"
-      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오"
-      rel="noreferrer"
-    >
-      구글 일정 등록
-    </RoundButton>
-    <RoundButton
-      href="https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics"
-      target="_blank"
-      rel="noreferrer"
-    >
-      애플 일정 등록
-    </RoundButton>
-  </ButtonRow>
+interface ButtonOverlayProps {
+  background?: string;
+}
+const ButtonOverlay = styled.div<ButtonOverlayProps>`
+  background: ${({ background }) => background ?? 'transparent'} !important;
+  padding: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+`;
+
+export const ScheduleButtons = (props: ButtonOverlayProps) => (
+  <ButtonOverlay background={props.background ?? 'transparent'}>
+    <ButtonRow>
+      <RoundButton
+        target="_blank"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=하영 제세 결혼식&dates=20250906T020000Z/20250906T030000Z&details=저희 결혼식에 초대합니다!&location=보테가마지오"
+        rel="noreferrer"
+      >
+        구글 일정 등록
+      </RoundButton>
+      <RoundButton
+        href="https://hayeong95.github.io/mobile-wedding-invitation/wedding-invitation.ics"
+        target="_blank"
+        rel="noreferrer"
+      >
+        애플 일정 등록
+      </RoundButton>
+    </ButtonRow>
+  </ButtonOverlay>
 );
