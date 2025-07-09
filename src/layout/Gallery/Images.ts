@@ -10,6 +10,8 @@ import image09 from '@/assets/images/optimized/09.webp'
 import image10 from '@/assets/images/optimized/10.webp'
 import image11 from '@/assets/images/optimized/11.webp'
 import image12 from '@/assets/images/optimized/12.webp'
+import image13 from '@/assets/images/optimized/13.webp'
+import image14 from '@/assets/images/optimized/14.webp'
 
 
 const images = [   /* 이미지 경로를 리스트로 저장 */
@@ -73,6 +75,16 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
   },{
     alt: 'image12',
     source: image12,
+    width: 640,
+    height: 960
+  },{
+    alt: 'image13',
+    source: image13,
+    width: 640,
+    height: 960
+  },{
+    alt: 'image14',
+    source: image14,
     width: 640,
     height: 960
   }
