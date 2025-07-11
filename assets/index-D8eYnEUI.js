@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/GallerySlideshow-BmtIuvGY.js","assets/GallerySlideshow-Cs5bQiBR.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/GallerySlideshow-B8ar7cpk.js","assets/GallerySlideshow-Cs5bQiBR.css"])))=>i.map(i=>d[i]);
 function h0(n,e){for(var r=0;r<e.length;r++){const s=e[r];if(typeof s!="string"&&!Array.isArray(s)){for(const l in s)if(l!=="default"&&!(l in n)){const u=Object.getOwnPropertyDescriptor(s,l);u&&Object.defineProperty(n,l,u.get?u:{enumerable:!0,get:()=>s[l]})}}}return Object.freeze(Object.defineProperty(n,Symbol.toStringTag,{value:"Module"}))}(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const l of document.querySelectorAll('link[rel="modulepreload"]'))s(l);new MutationObserver(l=>{for(const u of l)if(u.type==="childList")for(const d of u.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&s(d)}).observe(document,{childList:!0,subtree:!0});function r(l){const u={};return l.integrity&&(u.integrity=l.integrity),l.referrerPolicy&&(u.referrerPolicy=l.referrerPolicy),l.crossOrigin==="use-credentials"?u.credentials="include":l.crossOrigin==="anonymous"?u.credentials="omit":u.credentials="same-origin",u}function s(l){if(l.ep)return;l.ep=!0;const u=r(l);fetch(l.href,u)}})();function Uc(n){return n&&n.__esModule&&Object.prototype.hasOwnProperty.call(n,"default")?n.default:n}var Wu={exports:{}},ss={},Hu={exports:{}},me={};/**
  * @license React
  * react.production.min.js
@@ -2116,7 +2116,7 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const e of t
  갤러리아 포레 G층(B2) 
 02-3409-0123`,naverMap:"https://naver.me/GOPeWA1M",kakaoMap:"https://kko.kakao.com/sQ4Rf8Ks4B",lat:37.5456773286722,lon:127.042914714267},tR=[{title:"📍 지하철",desc:`- 분당선 서울숲역 5번 출구 (도보 5분)
 - 2호선 뚝섬역 8번 출구 (도보 10분)`},{title:"📍 주차안내",desc:`- 건물 내 B3-B7층 2시간 무료주차
-- 안내데스크에서 주차 등록`}],nR=["💛","💌","🥹","🥳","👰🏻‍","🤵🏻‍️","🤍","✨","💍","🔔"],rR={greeting:ZT,hostInfo:JT,mapInfo:eR,locationInfo:tR,emojis:nR},iR=P.lazy(()=>pw(()=>import("./GallerySlideshow-BmtIuvGY.js"),__vite__mapDeps([0,1]))),sR=ee.div`
+- 안내데스크에서 주차 등록`}],nR=["💛","💌","🥹","🥳","👰🏻‍","🤵🏻‍️","🤍","✨","��","🔔"],rR={greeting:ZT,hostInfo:JT,mapInfo:eR,locationInfo:tR,emojis:nR},iR=P.lazy(()=>pw(()=>import("./GallerySlideshow-B8ar7cpk.js"),__vite__mapDeps([0,1]))),sR=ee.div`
   width: 100%;
   text-align: center;
   font-size: 0.75rem;
