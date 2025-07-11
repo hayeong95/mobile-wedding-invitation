@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // /mobile-wedding-invitation/home → /mobile-wedding-invitation/#/home
-      var path = location.pathname.replace('/mobile-wedding-invitation', '');
+      // SPA fallback: 모든 경로를 index.html로 리다이렉트
+      var path = location.pathname;
       var search = location.search || '';
       var hash = location.hash || '';
-      location.replace('/mobile-wedding-invitation/#' + path + search + hash);
+      location.replace('/mobile-wedding-invitation/' + search + hash);
     </script>
   </head>
   <body>
