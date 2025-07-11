@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=/mobile-wedding-invitation/" />
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
     <script>
-      // SPA 라우팅을 위해 경로와 쿼리, 해시를 index.html로 넘김
-      var redirect = '/mobile-wedding-invitation' + location.pathname.replace('/mobile-wedding-invitation', '') + location.search + location.hash;
-      location.replace(redirect);
+      // /mobile-wedding-invitation/home → /mobile-wedding-invitation/#/home
+      var path = location.pathname.replace('/mobile-wedding-invitation', '');
+      var search = location.search || '';
+      var hash = location.hash || '';
+      location.replace('/mobile-wedding-invitation/#' + path + search + hash);
     </script>
   </head>
   <body>
