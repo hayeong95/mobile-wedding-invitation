@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import data from 'data.json';
+import data from 'data1.json';
 import { increment, onValue, ref, update } from 'firebase/database';
 import { realtimeDb } from 'firebase';
 import JSConfetti from 'js-confetti';

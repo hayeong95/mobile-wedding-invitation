@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
+import data from 'data1.json';
 import Button from '@/components/Button';
 
 const MapButtons = () => {

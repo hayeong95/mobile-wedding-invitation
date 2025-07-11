@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import data from 'data.json';
 import { BrideAndGroom } from '@/types/data';
 
-const Host = () => {
+type HostProps = {
+  data: any;
+};
+
+const Host = ({ data }: HostProps) => {
   const { groom, bride } = data.greeting.host;
   return (
     <>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { NavermapsProvider } from 'react-naver-maps';
 import { Heading1 } from '@/components/Text';
 import Wrapper from '@/components/Wrapper';
@@ -12,6 +13,9 @@ import Location from '@/layout/Location/Location';
 import Main from '@/layout/Main/Main';
 import Calendar from '@/components/Calendar';
 import styled from '@emotion/styled';
+
+import data1 from './data1.json';
+import data2 from './data2.json';
 
 const GallerySlideshow = lazy(() => import('./layout/Gallery/GallerySlideshow'));
 
@@ -28,7 +32,11 @@ const Attribution = styled.div`
   }
 `;
 
-function App() {
+type AppContentProps = {
+  data: any;
+};
+
+function AppContent({ data }: AppContentProps) {
   const [isVisible, setIsVisible] = useState(false);
   const galleryRef = useRef(null);
 
@@ -56,11 +64,11 @@ function App() {
     <>
       <Container>
         <Wrapper>
-          <Main />
+          <Main data={data}/>
         </Wrapper>
         <Wrapper>
           <Heading1>모시는 글</Heading1>
-          <Invitation />
+          <Invitation data={data} />
         </Wrapper>
         <Wrapper>
           <Calendar />
@@ -73,7 +81,7 @@ function App() {
         </Wrapper>
         <Wrapper>
           <Heading1>마음 전하실 곳</Heading1>
-          <Account />
+          <Account data={data}/>
         </Wrapper>
         <Wrapper>
           <Heading1>오시는 길</Heading1>
@@ -91,6 +99,17 @@ function App() {
         </a>
       </Attribution>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router basename="/mobile-wedding-invitation">
+      <Routes>
+        <Route path="/" element={<AppContent data={data1} />} />
+        <Route path="/home" element={<AppContent data={data2} />} />
+      </Routes>
+    </Router>
   );
 }
 

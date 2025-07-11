@@ -1,16 +1,20 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
 import AccountWrap from './AccountWrap';
 import Accordion from '@/components/Accordion';
 
-const Account = () => {
+
+type AccountProps = {
+  data: any;
+};
+
+const Account = ({ data }: AccountProps) => {
   const { hostInfo } = data;
   return (
     <HostInfoWrapper>
-      {hostInfo.map((host) => {
+      {hostInfo.map((host: any) => {
         return (
           <Accordion title={host.host} key={host.host}>
-            {host.accountInfo.map((account) => {
+            {host.accountInfo.map((account: any) => {
               return (
                 <AccountWrap
                   key={account.name}

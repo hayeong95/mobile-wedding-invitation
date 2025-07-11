@@ -1,4 +1,4 @@
-import data from 'data.json';
+import data from 'data1.json';
 import NaverMap from './NaverMap.js';
 
 const Map = () => {

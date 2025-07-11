@@ -1,11 +1,15 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
 import Host from '../Contact/Host';
 import RoundButton from '@/components/RoundButton';
 import { Paragraph } from '@/components/Text';
 import flowerImg from '@/assets/images/nature.png';
 
-const Invitation = () => {
+type InvitationProps = {
+  data: any;
+};
+
+const Invitation = ({ data }: InvitationProps) => {
+  // data 사용
   const { greeting } = data;
 
   // const handleICSDownload = () => {
@@ -41,7 +45,7 @@ const Invitation = () => {
         alt="flower"
         style={{ width: 24, height: 24, verticalAlign: 'middle', marginRight: 6 }}
       />
-      <Host />
+      <Host data={data}/>
       <Paragraph style={{ textAlign: 'center' }}>{greeting.eventDetail}</Paragraph>
     </InvitationWrapper>
   );

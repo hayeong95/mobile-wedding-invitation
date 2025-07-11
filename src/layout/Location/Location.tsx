@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
+import data from 'data1.json';
 import Address from './Address';
 import Map from './Map';
 import MapButtons from './MapButtons';

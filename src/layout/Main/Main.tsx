@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
 import mainImg from '@/assets/images/optimized/main.webp'
 
-const Main = () => {
+type MainProps = {
+  data: any;
+};
+
+const Main = ({ data }: MainProps) => {
   const { greeting } = data;
   return (
     <div>
