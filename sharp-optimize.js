@@ -2,8 +2,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-// const inputDir = './src/assets/images';
-const inputDir = './public';
+const inputDir = './src/assets/images';
+//const inputDir = './public';
 
 const outputDir = './src/assets/images/optimized';
 

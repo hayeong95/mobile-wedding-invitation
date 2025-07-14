@@ -12,7 +12,7 @@ import image11 from '@/assets/images/optimized/11.webp'
 import image12 from '@/assets/images/optimized/12.webp'
 import image13 from '@/assets/images/optimized/13.webp'
 import image14 from '@/assets/images/optimized/14.webp'
-
+import image15 from '@/assets/images/optimized/15.webp'
 
 const images = [   /* 이미지 경로를 리스트로 저장 */
   {
@@ -24,6 +24,12 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
   {
     alt: 'image02',
     source: image02,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image15',
+    source: image15,
     width: 640,
     height: 960
   },
