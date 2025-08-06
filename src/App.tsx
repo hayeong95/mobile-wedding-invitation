@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // import { NavermapsProvider } from 'react-naver-maps';
 import { Heading1 } from '@/components/Text';
 import Wrapper from '@/components/Wrapper';
@@ -104,7 +104,7 @@ function AppContent({ data }: AppContentProps) {
 
 function App() {
   return (
-    <Router basename="/mobile-wedding-invitation">
+    <Router>
       <Routes>
         <Route path="/" element={<AppContent data={data1} />} />
         <Route path="/home" element={<AppContent data={data2} />} />
